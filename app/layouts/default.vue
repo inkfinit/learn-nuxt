@@ -9,6 +9,7 @@
       <div class="flex justify-around items-center h-16">
         <NuxtLink 
           to="/" 
+          :replace="true"
           class="flex flex-col items-center justify-center w-full h-full text-gray-500 hover:text-primary-500 dark:text-gray-400 dark:hover:text-primary-400"
           active-class="text-primary-500 dark:text-primary-400"
         >
@@ -18,6 +19,7 @@
 
         <NuxtLink 
           to="/list" 
+          :replace="$route.path !== '/'"
           class="flex flex-col items-center justify-center w-full h-full text-gray-500 hover:text-primary-500 dark:text-gray-400 dark:hover:text-primary-400"
           active-class="text-primary-500 dark:text-primary-400"
         >
@@ -27,6 +29,7 @@
 
         <NuxtLink 
           to="/document" 
+          :replace="$route.path !== '/'"
           class="flex flex-col items-center justify-center w-full h-full text-gray-500 hover:text-primary-500 dark:text-gray-400 dark:hover:text-primary-400"
           active-class="text-primary-500 dark:text-primary-400"
         >
