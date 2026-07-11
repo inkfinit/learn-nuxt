@@ -3,15 +3,25 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: [
-    '@vite-pwa/nuxt'
+    '@vite-pwa/nuxt',
+    '@nuxt/ui'
   ],
+  css: ['~/assets/css/main.css'],
+  app: {
+    head: {
+      meta: [
+        { name: 'theme-color', media: '(prefers-color-scheme: light)', content: '#10b981' },
+        { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#059669' }
+      ]
+    }
+  },
   pwa: {
     registerType: 'autoUpdate',
     manifest: {
       name: 'Proyek Nuxt PWA Saya',
       short_name: 'NuxtPWA',
       description: 'Aplikasi Nuxt 3 dengan fitur PWA yang di-deploy ke Vercel',
-      theme_color: '#ffffff',
+      theme_color: '#10b981',
       icons: [
         {
           src: 'pwa-192x192.png',

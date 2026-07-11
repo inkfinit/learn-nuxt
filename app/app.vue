@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <VitePwaManifest />
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome /> </div>
+  <VitePwaManifest />
+  <NuxtRouteAnnouncer />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
